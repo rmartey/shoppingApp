@@ -69,36 +69,37 @@ const logIn = () => {
                     },
                     shadowRadius: 5,
                     shadowOpacity: 1.0,
-                    padding: 10,
+                    padding: 20,
                 }}>
                     
                     <View style = {{
                         flexDirection: 'row',}}>
                             
-                        <Feather name="unlock" size={24} color="black" />
+                        <Feather name="unlock" size={24} color="black"/>
                         <TextInput style = {{
                             marginLeft:10,
                             fontWeight: "500",
                             fontSize: 20,
+                            width: 200,
                             
                         }} placeholder = "password"></TextInput>
-                        <Text style = {{color: "orange", marginLeft: 14,}}>Forgot</Text>
+                        <Text style = {{color: "orange", marginLeft: 5, marginRight: 10,}}>Forgot</Text>
                     </View>
                 </View>
 
                 <View>
                     <TouchableOpacity style = {{
-                        width:200,
-                        height:30,
+                        width:250,
+                        height:40,
                         alignItems: 'center',
                         justifyContent: 'center',
                         backgroundColor: "grey",
                         borderRadius: 10,
-                        opacity: 0.5,
+                        opacity: 0.6,
                         marginTop: 20,
 
                     }}>
-                        <Text style = {{fontWeight:"900", color:"orange"}}>
+                        <Text style = {{fontWeight:"900", color:"orange", fontSize: 24}}>
                             Login
                         </Text>
                     </TouchableOpacity>
