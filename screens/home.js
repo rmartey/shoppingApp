@@ -1,26 +1,16 @@
 import * as React from 'react';
-import { View, Text, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, FlatList } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import styles from "../components/styles";
+import ProductItem from "../components/ProductItem";
+import products from "../data/products";
 
 
-
-const categories = () =>{
-  return (
-    <View>
-      <FlatList>
-
-      </FlatList>
-
-    </View>
-  );
-}
 
 const HomeScreen = () => {
     return (
-      <View style = {{flex: 1, }} >
-
-
+      <View style = {styles.page} >
 
         <View style = {{ 
           flexDirection: 'row',
@@ -45,24 +35,18 @@ const HomeScreen = () => {
 
           </View>
 
+        </View> 
+        <View>
+            <FlatList 
+              data = {products}
+              renderItem = {({item}) => <ProductItem item = {item}/>}
+            />
         </View>
-
-
 
       </View>
     );
   }
 
-  const styles = StyleSheet.create({
-    container: {
-     flex: 1,
-     paddingTop: 22
-    },
-    item: {
-      padding: 10,
-      fontSize: 18,
-      height: 44,
-    },
-  });
+
 
   export default HomeScreen;

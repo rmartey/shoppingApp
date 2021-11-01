@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ImageBackground, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import {ImageBackground, View, Text, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
@@ -9,9 +9,9 @@ import { Feather } from '@expo/vector-icons';
 const logIn = () => {
     return (
         <ImageBackground style = {{flex: 1,justifyContent: 'center',}} source={ require('../images/background.png')} resizeMode ="cover">
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 
-                <View style ={{
+                <SafeAreaView style ={{
                     width: 320,
                     height: 50,
                     flexDirection: "column",
@@ -19,9 +19,9 @@ const logIn = () => {
                 }}>
                     <Text style={{fontSize:25, fontWeight: "500",}}>Login</Text>
                     <Text>Please sign in to continue</Text>
-                </View>
+                </SafeAreaView>
 
-                <View style = {{
+                <SafeAreaView style = {{
                     alignItems: 'center', 
                     justifyContent: 'center',
                     width: 330,
@@ -41,7 +41,7 @@ const logIn = () => {
                 
                     <Text>Email</Text>
 
-                    <View style = {{
+                    <SafeAreaView style = {{
                         flexDirection: 'row',}}>
                             
                         <MaterialCommunityIcons name="email-multiple-outline" size={24} color="black" />
@@ -52,10 +52,10 @@ const logIn = () => {
                         
                             
                         }} placeholder = "user123@gmail.com"></TextInput>
-                    </View>
-                </View>
+                    </SafeAreaView>
+                </SafeAreaView>
 
-                <View style = {{
+                <SafeAreaView style = {{
                     alignItems: 'center', 
                     justifyContent: 'center',
                     width: 330,
@@ -72,7 +72,7 @@ const logIn = () => {
                     padding: 20,
                 }}>
                     
-                    <View style = {{
+                    <SafeAreaView style = {{
                         flexDirection: 'row',}}>
                             
                         <Feather name="unlock" size={24} color="black"/>
@@ -84,10 +84,10 @@ const logIn = () => {
                             
                         }} placeholder = "password"></TextInput>
                         <Text style = {{color: "orange", marginLeft: 5, marginRight: 10,}}>Forgot</Text>
-                    </View>
-                </View>
+                    </SafeAreaView>
+                </SafeAreaView>
 
-                <View>
+                <SafeAreaView>
                     <TouchableOpacity style = {{
                         width:250,
                         height:40,
@@ -103,9 +103,9 @@ const logIn = () => {
                             Login
                         </Text>
                     </TouchableOpacity>
-                </View>
+                </SafeAreaView>
                 
-                </View>
+                </SafeAreaView>
         </ImageBackground>
 
 
