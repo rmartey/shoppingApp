@@ -1,7 +1,7 @@
 export default [
     {
         id: "1",
-        title: "Nike Air",
+        title: "Nike Air Force",
         image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/bb4c0aae-c696-4a18-882d-cc15725a0e29/air-max-90-g-golf-shoe-gKQQxC.png',
         price: "$269.99",
         oldPrice:"$199.99",

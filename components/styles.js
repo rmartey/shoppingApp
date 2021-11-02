@@ -44,6 +44,10 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       marginVertical: 5,
     },
+    description:{
+      marginVertical:10,
+      
+    },
     
   });
 

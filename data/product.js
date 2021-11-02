@@ -9,7 +9,12 @@ export default [
             'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/91891e69-614c-4646-a78a-71051650aa94/air-max-90-younger-shoe-rxlvdp.png',
             'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/618a70e0-f9cc-44b1-b339-8905d590c508/air-max-2090-eoi-mens-shoes-hHt1X0.png',
         ],
+        options:[
+            'Black',
+            'White',
+        ],
         price: 270,
-        avgRating: 4.7
+        avgRating: 4.7,
     },
+    
 ]

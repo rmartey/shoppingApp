@@ -6,7 +6,7 @@ import { Feather } from '@expo/vector-icons';
 //const image = { source: '../images/background.png'};
 
 
-const logIn = () => {
+const LogIn = () => {
     return (
         <ImageBackground style = {{flex: 1,justifyContent: 'center',}} source={ require('../images/background.png')} resizeMode ="cover">
             <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -112,4 +112,4 @@ const logIn = () => {
             );
         }
         
-  export default logIn;
+  export default LogIn;
