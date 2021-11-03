@@ -17,8 +17,6 @@ const totalPrice = product.reduce((summedPrice, product) =>
     return (
       <View style = {styles.page} >
 
-        
-
         <View>
             <FlatList 
               data = {product}

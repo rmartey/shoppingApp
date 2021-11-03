@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, FlatList } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import styles from "./styles";
-import ProductItem from "../components/ProductItem";
+import ProductItem from "../components/productItem";
 import products from "../data/products";
 
 
@@ -45,7 +45,7 @@ const HomeScreen = () => {
 
       </View>
     );
-  }
+  };
 
 
 

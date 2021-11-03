@@ -4,9 +4,10 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     page: {
       padding: 10,
+      flex:1,
     },
     addressInput: {
-      backgroundColor: "White",
+      backgroundColor: "#ffffff",
       padding: 5,
       marginVertical: 5,
       height: 30,
