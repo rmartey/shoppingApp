@@ -14,6 +14,13 @@ const styles = StyleSheet.create({
       margin: 5,
 
     },
+    descriptionImage: {
+      height:450,
+      resizeMode: "cover",
+      borderRadius: 10,
+      padding: 10,
+    },
+
     image: {
       height:150,
       resizeMode: "contain",
@@ -25,6 +32,9 @@ const styles = StyleSheet.create({
     },
     title: {
       fontSize: 24,
+    },
+    descriptiontitle: {
+      fontSize: 50,
     },
     price: {
       fontSize: 18,
@@ -44,9 +54,23 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       marginVertical: 5,
     },
+    descriptionRating:{
+      flexDirection: "row",
+      marginVertical: 5,
+      justifyContent: "center",
+      alignItems: "center",
+    },
     description:{
-      marginVertical:10,
+      padding: 10,
+      marginVertical: 10,
+      justifyContent: "center",
+      alignItems: "center"
       
+    },
+    titleContainer:{
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
     },
     
   });

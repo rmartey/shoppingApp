@@ -1,7 +1,7 @@
 import React, {useState}from "react";
 import { View, Text, Image } from "react-native";
 import styles from "./styles";
-import product from "../data/Product";
+import product from "../data/product";
 import QuantitySelector from "./quantitySelector";
 import Button from "./button";
 

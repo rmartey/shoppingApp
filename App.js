@@ -3,12 +3,11 @@ import { View, Text, FlatList, SafeAreaView, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-//import HomeScreen from "./screens/home";
-//import LandingPage from './components/LandingPage';
-import Page from './screens/Page';
+import HomeScreen from "./screens/home";
 import LogIn from "./screens/login";
-//import cart from "./screens/cart";
-import LandingPage from './screens/Page';
+import Cart from "./screens/cart";
+import LandingPage from './screens/landingPage';
+import AddressForm from './screens/addressForm';
 //import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -21,7 +20,7 @@ const App = () => {
   return (
     <View>
       
-      <Page />
+      <AddressForm />
       {/*<NavigationContainer>
         <Tab.Navigator initialRouteName = "LandingPage">
           <Tab.Screen name="Home" component={HomeScreen} />
