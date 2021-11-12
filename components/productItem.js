@@ -1,13 +1,20 @@
 import * as React from 'react';
-import { View, Text,Image } from 'react-native';
+import { View, Text,Image, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 import { FontAwesome } from '@expo/vector-icons';
 import styles from "./styles";
 
 
 
 const ProductItem = ({ item }) => {
+
+  const navigation = useNavigation();
+
+  const land = () => {
+    navigation.navigate('LandingPage',{/*{id} */} );
+  }
     return (
-        <View style = {styles.root}>
+        <Pressable onPress = {land} style = {styles.root}>
 
           <Image style={styles.image} source = {{uri: item.image}} />
 
@@ -30,7 +37,7 @@ const ProductItem = ({ item }) => {
               {item.oldPrice && <Text style={styles.oldPrice}>{item.oldPrice}</Text>}
             </Text>
           </View>
-        </View>
+        </Pressable>
 
     );
 };

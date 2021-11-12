@@ -1,5 +1,6 @@
 import React, {useState}from "react";
 import { View, Text, Image } from "react-native";
+import { useRoute } from "@react-navigation/core";
 import styles from "./styles";
 import product from "../data/product";
 import QuantitySelector from "./quantitySelector";
@@ -7,11 +8,15 @@ import Button from "./button";
 
 
 const LandingPage = () =>{
+    
 
     const [quantity, setQuantity] = useState(1);
 
+    const route = useRoute;
+
     return (
         <View style = {{backgroundColor: "white", padding: 10,}}>
+
             <Text style = {styles.title}>{product.title}</Text>
 
 

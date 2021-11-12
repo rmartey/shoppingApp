@@ -12,7 +12,7 @@ const Root = createNativeStackNavigator();
 const Router = () => {
     return(
         <NavigationContainer>
-            <Root.Navigator>
+            <Root.Navigator screenOptions = {{headerShown: false}}>
                 <Root.Screen component = {BottomTabNav} name = "homeTabs" />
             </Root.Navigator>
         </NavigationContainer>

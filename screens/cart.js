@@ -7,12 +7,19 @@ import styles from "./styles";
 import product from "../data/cart";
 import CartItem from '../components/cartItem';
 import Button  from '../components/button';
+import {useNavigation} from "@react-navigation/native";
 
 
 const Cart = () => {
 
-const totalPrice = product.reduce((summedPrice, product) =>
-  (summedPrice + product.item.price * product.item.quantity), 0);
+  const navigation = useNavigation();
+
+  const totalPrice = product.reduce((summedPrice, product) =>
+    (summedPrice + product.item.price * product.item.quantity), 0);
+
+  const onCheckout = () => {
+    navigation.navigate('AddressForm');
+  };
 
     return (
       <View style = {styles.page} >
@@ -30,7 +37,7 @@ const totalPrice = product.reduce((summedPrice, product) =>
                   <Text style ={{fontSize: 28}}>
                     Subtotal ({product.length} items): <Text style ={{fontSize: 18, color: "#f28d44"}}>${totalPrice}</Text>
                   </Text>
-                  <Button text = "Proceed to checkout"/>
+                  <Button text = "Proceed to checkout" onPress = {onCheckout}/>
                 </View>
               )}
             />

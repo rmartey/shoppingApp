@@ -1,15 +1,17 @@
-import * as React from 'react';
-import { View, Text, TouchableOpacity, FlatList } from 'react-native';
-import { EvilIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import React, {useState} from 'react';
+import { View, FlatList } from 'react-native';
 import styles from "./styles";
 import ItemDescription from "../components/itemDescription";
 import product from "../data/product";
+import HeaderComponent from "../components/headerComponent";
 
 
 const LandingPage = () => {
+
+
     return (
       <View style = {styles.page} >
+        <HeaderComponent/>
         <View>
             <FlatList 
               data = {product}
