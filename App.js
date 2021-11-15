@@ -4,6 +4,11 @@ import { View, StyleSheet } from 'react-native';
 import Router from './router';
 import Cart from './screens/cart';
 
+import Amplify from 'aws-amplify'
+import {withAuthenticator} from "aws-amplify-react-native";
+import config from './src/aws-exports'
+Amplify.configure(config)
+
 
 
 
@@ -22,4 +27,4 @@ const App = () => {
 const styles = StyleSheet.create({
 
 })
-export default App;
+export default withAuthenticator(App);

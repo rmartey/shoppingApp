@@ -9,8 +9,8 @@ import products from "../data/products";
 
 
 const HomeScreen = ({searchValue}) => {
-console.log(searchValue);
-    return (
+
+  return (
       <View style = {styles.page} >
 
         <HeaderComponent/>
