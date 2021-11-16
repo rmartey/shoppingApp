@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { View, Text,Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { FontAwesome } from '@expo/vector-icons';
@@ -11,8 +11,10 @@ const ProductItem = ({ item }) => {
   const navigation = useNavigation();
 
   const land = () => {
-    navigation.navigate('LandingPage',{/*{id} */} );
-  }
+    navigation.navigate('LandingPage', {id: item.id});
+  };
+
+  
     return (
         <Pressable onPress = {land} style = {styles.root}>
 
@@ -33,8 +35,8 @@ const ProductItem = ({ item }) => {
               <Text style = {styles.ratings}>{item.ratings}</Text>
             </View>
             <Text style = {styles.price}>
-              {item.price}
-              {item.oldPrice && <Text style={styles.oldPrice}>{item.oldPrice}</Text>}
+              ${item.price.toFixed(2)}
+              {item.oldPrice && <Text style={styles.oldPrice}>${item.oldPrice.toFixed(2)}</Text>}
             </Text>
           </View>
         </Pressable>

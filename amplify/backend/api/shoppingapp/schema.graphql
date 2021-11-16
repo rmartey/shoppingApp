@@ -1,0 +1,31 @@
+type Product @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  description: String
+  image: String
+  images: [String!]
+  options: [String!]
+  avgRating: Float
+  ratings: Int
+  price: Float!
+  oldPrice: Float
+  cartproducts: [CartProductProduct] @connection(keyName: "byProduct", fields: ["id"])
+}
+
+type CartProduct @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userSub: String!
+  quantity: Int!
+  option: String
+  productID: ID!
+  product: [CartProductProduct] @connection(keyName: "byCartProduct", fields: ["id"])
+}
+
+type CartProductProduct @model(queries: null) @key(name: "byCartProduct", fields: ["cartproductID", "productID"]) @key(name: "byProduct", fields: ["productID", "cartproductID"]) @auth(rules: [{allow: public}, {allow: public}]) {
+  id: ID!
+  cartproductID: ID!
+  productID: ID!
+  cartproduct: CartProduct! @connection(fields: ["cartproductID"])
+  product: Product! @connection(fields: ["productID"])
+}
+ 

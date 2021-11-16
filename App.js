@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import Router from './router';
@@ -17,7 +17,6 @@ const App = () => {
   return (
     <View style = {{flex:1}}>
        <Router />
-    {/* <Cart/> */}
     </View>
 
   );
