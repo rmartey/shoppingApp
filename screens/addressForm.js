@@ -47,7 +47,7 @@ const AddressForm = () => {
                     selectedValue={country}
                 >
                     {countries.map(country =>(
-                        <Picker.Item value = {country.code} label = {country.name}/>
+                        <Picker.Item key = {country.code} value = {country.code} label = {country.name}/>
                     ))}
                     
                 </Picker>
@@ -79,7 +79,7 @@ const AddressForm = () => {
 
                 <View >
                     <Text>State</Text>
-                    <Picker
+                    {/* <Picker
                      style = {styles.pick}
                         onValueChange={setCountry}
                         selectedValue={country}
@@ -88,7 +88,7 @@ const AddressForm = () => {
                         <Picker.Item value = "" label = ""/>
                     ))}
                     
-                </Picker>
+                    </Picker> */}
                 </View>
                 <View>
                     <Text>Zip code</Text>

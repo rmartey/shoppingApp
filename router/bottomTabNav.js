@@ -1,5 +1,4 @@
 import React from "react";
-import HomeScreen from "../screens/home";
 import ShoppingCartStack from "./shoppingCartStack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo } from '@expo/vector-icons';
@@ -13,7 +12,7 @@ const Tab = createBottomTabNavigator();
 const BottomTabNav = () => {
     return(
 
-            <Tab.Navigator screenOptions = {{headerShown: false}} tabBarOptions = {{showLabel: false, inactiveTintColor: "#f0d0a1", activeTintColor: "#f59300"}}>
+            <Tab.Navigator screenOptions = {{headerShown: false, showLabel: false}}>
                 <Tab.Screen 
                     component = {HomeStack} 
                     name = "home"
@@ -32,7 +31,7 @@ const BottomTabNav = () => {
 
                 <Tab.Screen 
                     component = {ShoppingCartStack} 
-                    name = "cart" 
+                    name = "shoppingcart" 
                     options = {{
                         tabBarIcon: ({color}) => (<MaterialCommunityIcons name="cart-arrow-down" size={24} color={color} />)}            
                     }
